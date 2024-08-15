@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
             data.forEach(pkg => {
                 const option = document.createElement("option");
                 option.value = pkg.packageName; 
-                option.textContent = `${pkg.packageName} - ${pkg.amountMinutes} min - ${pkg.price} $ - ${pkg.amountData} MB - ${pkg.amountSms} SMS - ${pkg.period} period`;
+                option.textContent = `${pkg.packageName} - ${pkg.amountMinutes} min - ${pkg.price} - ${pkg.amountData} MB - ${pkg.amountSms} SMS - ${pkg.period} period`;
                 packageSelect.appendChild(option);
             });
         })
