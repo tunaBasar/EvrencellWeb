@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
    
-    fetch(`http://35.242.205.201/v1/api/packages/getUserPackageByMsisdn?msisdn=${'90'+msisdn}`)
+    fetch(`http://35.242.205.201/v1/api/packages/getUserPackageByMsisdn?msisdn=${msisdn}`)
         .then(response => response.json())
         .then(packageData => {
             const totalData = packageData.amountData;
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('packagename').textContent=packageName;
 
             
-            fetch(`http://35.242.205.201/v1/api/balance/remainingBalance?msisdn=${'90'+msisdn}`)
+            fetch(`http://35.242.205.201/v1/api/balance/remainingBalance?msisdn=${msisdn}`)
                 .then(response => response.json())
                 .then(balanceData => {
                     const remainingData = balanceData.balanceData;
